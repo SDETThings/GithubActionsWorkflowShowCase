@@ -10,4 +10,3 @@ jobs:
       - name: Echo multiple line commands
         run: |
           pwd
-          mvn clean
