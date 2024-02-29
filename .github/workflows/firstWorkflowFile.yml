@@ -1,0 +1,13 @@
+name: Simple workflow example
+on: push
+
+jobs:
+  Run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo single line command
+        run: echo 'Hello World'
+      - name: Echo multiple line commands
+        run: |
+          pwd
+          mvn clean
