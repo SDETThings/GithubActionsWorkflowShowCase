@@ -1,0 +1,13 @@
+name: Actions first example
+on: push
+
+jobs:
+  Run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files before checkout
+        run: ls -a
+      - name: Checkout repository into runner
+        uses: actions/checkout@v2
+      - name: List files after checkout
+        run: ls -a
