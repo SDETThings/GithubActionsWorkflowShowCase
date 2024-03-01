@@ -1,0 +1,29 @@
+name: Show working directory and files
+on: push
+defaults:
+  run:
+    shell: bash
+jobs:
+  Linux-working-directory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show working directory in Linux
+        run: |
+          pwd
+          ls -a
+          echo "GITHUB runner id : " $GITHUB_SHA
+          echo "GITHUB repository path : " $GITHUB_REPOSIORY
+          echo "GITHUB repository workspace path : " $GITHUB_WORKSPACE
+  Windows-working-directory:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Show working directory in Windows
+        run: |
+          pwd
+          dir
+          echo "GITHUB runner id : " $env:GITHUB_SHA
+          echo "GITHUB repository path : " $env:GITHUB_REPOSIORY
+          echo "GITHUB repository workspace path : " $env:GITHUB_WORKSPACE
