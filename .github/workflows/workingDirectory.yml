@@ -12,7 +12,7 @@ jobs:
           pwd
           ls -a
           echo "GITHUB runner id : " $GITHUB_SHA
-          echo "GITHUB repository path : " $GITHUB_REPOSIORY
+          echo "GITHUB repository path : " $GITHUB_REPOSITORY
           echo "GITHUB repository workspace path : " $GITHUB_WORKSPACE
   Windows-working-directory:
     runs-on: windows-latest
@@ -25,5 +25,5 @@ jobs:
           pwd
           dir
           echo "GITHUB runner id : " $env:GITHUB_SHA
-          echo "GITHUB repository path : " $env:GITHUB_REPOSIORY
+          echo "GITHUB repository path : " $env:GITHUB_REPOSITORY
           echo "GITHUB repository workspace path : " $env:GITHUB_WORKSPACE
