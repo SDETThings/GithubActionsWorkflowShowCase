@@ -21,5 +21,7 @@ jobs:
     steps:
       - name: Echo a string
         run: Write-Output " Hello world in windows "
-      - name: Error
-        run: does not exists
+      - name: Multiline commands
+        run: |
+          java -version
+          mvn -version
