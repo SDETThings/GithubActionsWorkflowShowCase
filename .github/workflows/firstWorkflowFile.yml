@@ -10,3 +10,15 @@ jobs:
       - name: Echo multiple line commands
         run: |
           pwd
+  parallel-job:
+    runs-on: macos-latest
+    steps:
+      - name: View SW version
+        run: sw_vers
+  dependant-job:
+    runs-on: windows-latest
+    steps:
+      - name: Echo a string
+        run: Write-Output " Hello world in windows "
+      - name: Error
+        run: does not exists
