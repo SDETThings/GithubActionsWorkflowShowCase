@@ -1,5 +1,5 @@
 name: Simple workflow example
-on: push
+on: workflow_dispatch
 
 jobs:
   Run-shell-commands:
