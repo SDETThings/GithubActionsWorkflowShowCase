@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo a string
-        run: echo "This workflow is run only because 'Events workflow' has completed
+        run: echo "This workflow is run only because 'Events workflow' has completed"
