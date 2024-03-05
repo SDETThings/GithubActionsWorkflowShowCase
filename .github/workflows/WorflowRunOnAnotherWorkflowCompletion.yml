@@ -1,0 +1,14 @@
+name: Run this workflow based on Events workflow
+
+on:
+  workflow_run:
+    workflows:
+      - Events example workflow
+    types:
+      - completed
+jobs:
+  Checkout-Code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo a string
+        run: echo "This workflow is run only because 'Events workflow' has completed

@@ -1,0 +1,17 @@
+name: Events example workflow
+on:
+  push:
+  pull_request:
+    types:
+      - opened
+      - closed
+      - reopened
+  issues:
+    types:
+      - opened
+jobs:
+  Checkout-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code in the runner
+        run: actions/checkout@v2
